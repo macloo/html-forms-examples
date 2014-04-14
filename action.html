@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms: Action and Servers</title>
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<div id="wrapper">
+
+
+
+<button id="indexbutton"><a href="index.html">INDEX</a></button>
+
+<h1>Forms: Action and Servers</h1>
+
+<p>Where does the data in a form go when the form is submitted?</p>
+
+<p>That depends. Code must tell it where to go. In all the examples <a href="index.html">here</a>, no data is sent to a server. All the form data stays right here, in your browser.</p>
+
+<p>Google Forms give us a good example of how most forms work when they send data to a server to be stored. If you view source, you can find the <code>&lt;form&gt;</code> tag:</p>
+
+<p><code>&lt;form action="https://docs.google.com/spreadsheet/formResponse?formkey=something&amp;theme=something_else&amp;xyz" method="POST" id="ss-form"&gt;</code></p>
+
+<p>The two attributes <em>action</em> and <em>method</em> are fully explained here: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data" target="_blank">Sending and retrieving form data</a>. Very simply, the <em>action</em> attribute tells the data WHERE to go, and the <em>method</em> attribute tells it HOW to go. In the Google example above, notice that <em>action</em> is a URL (which I have shortened). The <em>method</em> here is "POST"; the other common <em>method</em> is "GET" (one of those is usually used for HTML forms).</p>
+
+<p>When you use GET, the form data will be visible in the address bar of the browser, as is the case with most search engines:</p>
+
+<p><code>https://www.google.com/search?q=journalism</code></p>
+
+<p>That does not happen with POST. Clearly, when you are sending lots of data, or confidential data, you need to use POST.</p>
+
+<p>Whether your form uses POST or GET, either way it's an HTTP request, and that means your form has to be live on the Web, and the URL (supplied by <em>action</em>) has to interact with a script that lives on a server. That script might be written in Python or PHP or various other languages -- there are many options -- but you can't run it locally.</p>
+
+<p><strong>Google Forms:</strong> To give you a little experience with <em>action</em> and <em>method</em> and how forms store data, I set up <a href="http://bit.ly/mm_liveform" target="_blank">a public Google form</a> for you to fill out. Do that now.</p>
+
+<p>After you submit the form, view the data that Google saved from your form and everyone else's <a href="http://bit.ly/mm_formdata" target="_blank">in this spreadsheet</a>.</p>
+
+<p><strong>Email or contact forms:</strong> Every Web hosting company that's worth using provides a basic form handler program for email. You never need to write your own. The hosting company will provide a template HTML form for you to copy. The key is: You DO NOT CHANGE the <em>action</em> and <em>method</em> in the <code>&lt;form&gt;</code> tag! Also, you will need to type in your own email address, and then whenever someone fills that form on your website and submits it, you'll get a neatly formatted email. Usually you can modify the form as much as you want, as long as you don't change the <em>name</em> or <em>id</em> for any fields provided in the template. (Why? Because the form handler program will look for those, and it will throw an error if they're not found.)</p>
+
+<p>Return to the <a href="index.html">index</a>.</p>
+
+
+
+</div>
+</body>
+</html>

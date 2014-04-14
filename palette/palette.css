@@ -1,0 +1,55 @@
+/* palette tester */
+
+.first { background: #749a98; }
+.second { background: #5c5c5a; }
+.third { background: #998a6d; }
+.fourth { background: #cab38b; }
+.fifth { background: #dbccac; }
+
+
+/* change colors here to test text color contrast */
+#tester {
+	margin: 0;
+	padding: 0;
+	background:  #cab38b;  /* change color */
+	color:       #000;  /* change color */
+	margin-top: 20px;
+	}
+
+
+
+/* no need to change anything below */
+.square {
+	width: 100px;
+	height: 100px;
+	float: left;
+	}
+body {
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 100%;
+	color: #000;
+	background: #fff;
+	}
+#wrapper {
+	margin: 50px auto;
+	max-width: 600px;
+	padding: 40px;
+	}
+.clearfloats {
+	clear: both;
+	}
+h1 {
+	margin: 0;
+	padding: 20px;
+	font-family: Cambria, Georgia, serif;
+	font-size: 200%;
+	font-weight: normal;
+	line-height: 140%;
+	padding-bottom: 0;
+	}
+p {
+	margin: 0;
+	padding: 20px;
+	line-height: 140%;
+	padding-top: 0;
+	}

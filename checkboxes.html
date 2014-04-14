@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms: Checkboxes</title>
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/form.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="scripts\/jquery.min.js"><\/script>')</script>
+	<script src="scripts/checkboxes.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<p class="nojs">JavaScript is not enabled in your browser. These examples will not work without JavaScript.</p>
+
+
+<button id="indexbutton"><a href="index.html">INDEX</a></button>
+
+<h1>Forms: Checkboxes</h1>
+
+<p>In this form, we have a set of checkboxes and a set of radio buttons. Note that with checkboxes, you can select all that apply. With radio buttons, only one item can be selected. This default behavior should not be changed; you should always use the correct type of form element for the task.</p>
+
+<p>Notice how in a set (whether it's checkboxes or radio buttons), all items in that set must have the same <em>name</em> (in the HTML). This is important for making the form work correctly, particularly when form input is written out to a database. The <em>id</em>, on the other hand, must be unique for each item, not only in a set, but on the entire page.</p>
+
+<p>If you're sending the form data out to a database (on a Web server), test it carefully to make sure all checkbox data is being saved correctly.</p>
+
+<p>Note that the Reset button resets all form elements, but it does not reload the page.</p>
+
+
+
+<form>
+
+<fieldset id="toppings">
+<legend>What do you want on your pizza?</legend>
+
+	<input id="pepperoni" type="checkbox" name="toppings" value="pepperoni">
+	<label for="pepperoni">Pepperoni</label>
+<br>
+	<input id="ham" type="checkbox" name="toppings" value="ham">
+	<label for="ham">Ham</label>
+<br>
+	<input id="onions" type="checkbox" name="toppings" value="onions">
+	<label for="onions">Onions</label>
+<br>
+	<input id="redpep" type="checkbox" name="toppings" value="redpep">
+	<label for="redpep">Roasted red peppers</label>
+<br>
+	<input id="greenpep" type="checkbox" name="toppings" value="greenpep">
+	<label for="greenpep">Green bell peppers</label>
+<br>
+	<input id="mushrooms" type="checkbox" name="toppings" value="mushrooms">
+	<label for="mushrooms">Mushrooms</label>
+<br>
+	<input id="olives" type="checkbox" name="toppings" value="olives">
+	<label for="olives">Olives</label>
+<br>
+	<input id="garlic" type="checkbox" name="toppings" value="garlic">
+	<label for="garlic">Fresh sliced garlic</label>
+<br>
+	<input id="excheese" type="checkbox" name="toppings" value="excheese">
+	<label for="excheese">Extra cheese</label>
+<br>
+</fieldset>
+
+
+<fieldset id="size">
+<legend>How much pizza do you want?</legend>
+
+	<input type="radio" name="size" id="size1" value="Sm" />
+	<label for="size1">Small: 10-inch pie</label>
+<br>
+	<input type="radio" name="size" id="size2" value="Med" />
+	<label for="size2">Medium: 14-inch pie</label>
+<br>
+	<input type="radio" name="size" id="size3" value="Lg" />
+	<label for="size3">Large: 16-inch pie</label>
+<br>
+	<input type="radio" name="size" id="size4" value="XLg" />
+	<label for="size4">Extra Large: 18-inch pie</label>
+<br>
+</fieldset>
+
+
+<p>
+<input type="submit" name="submit" value="Submit">
+<input type="reset" name="reset" value="Reset">
+</p>
+
+
+</form>
+
+
+<p>Return to the <a href="index.html">index</a>.</p>
+
+
+
+</div>
+</body>
+</html>

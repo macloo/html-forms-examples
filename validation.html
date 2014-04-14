@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms: Validation</title>
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/form.css">
+	<link rel="stylesheet" href="styles/parsley.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="scripts\/jquery.min.js"><\/script>')</script>
+	<script src="scripts/validation.js"></script>
+	<script src="scripts/parsley.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<p class="nojs">JavaScript is not enabled in your browser. These examples will not work without JavaScript.</p>
+
+
+
+<!-- NOTE: two files added in header specifically for form validation:
+	   styles/parsley.css
+	   scripts/parsley.min.js
+	 This requires jQuery. The files come from: 
+	 http://parsleyjs.org/
+	 
+	 Why Parsley?
+	 http://blog.revrise.com/web-form-validation-javascript-libraries/
+	 
+	 Many form fields below have data-parsley- attributes. 
+     -->
+
+
+
+<button id="indexbutton"><a href="index.html">INDEX</a></button>
+
+<h1>Forms: Validation</h1>
+
+<p>Form validation is necessary so that people don't send incorrect or even malicious data to your app or database. Validating a form field means code will check the entered data and provide visible error messages to the user; also, the form data will not be submitted until it validates!</p>
+
+<p>There are two types of form validation: (1) Server-side happens on the Web server, after the form is submitted. (2) Client-side happens in the Web browser before the form is sent to the server. Client-side validation relies on JavaScript, so it's not 100 percent secure, because people can turn JavaScript off. Web professionals combine client-side techniques (fast and convenient for the users) with server-side (for security).</p>
+
+<p>This example uses the <a href="http://parsleyjs.org/" target="_blank">Parsley</a> jQuery library for client-side validation.</p>
+
+<p>The Submit button will write text onto the page at the bottom, below the form. Here we have an added feature: The page will scroll to that position (jQuery again).</p>
+
+<p>Note that the Reset button resets all form elements, but it does not reload the page.</p>
+
+
+
+<!-- this form uses the parsley validation library -->
+<form id="validation_example">
+
+
+<p class="label_above">
+<label for="fullname">Your name: [required]</label>
+</p>
+<input type="text" id="fullname" name="fullname" value='This is a regular input type="text" field' class="valex" data-parsley-length="[2, 40]" required>
+
+<p class="label_above">
+<label for="email">Your email: [required]</label>
+</p>
+<input type="email" id="email" name="email" value='This is an input type="email" field' class="valex" required>
+
+<p class="label_above">
+<label for="url">Your website URL: [optional]</label>
+</p>
+<input type="url" id="url" name="url" value='This is an input type="url" field' class="valex">
+
+
+
+<!-- width and height set in css file -->
+<p class="label_for_comments">
+<label for="comments">Your comments (minimum 20 chars, maximum 500):</label>
+</p>
+<textarea id="comments" name="comments" data-parsley-length="[20, 500]" data-parsley-trigger="change" required></textarea>
+
+<p>
+<input type="submit" name="submit" value="Submit">
+<input type="reset" name="reset" value="Reset">
+</p>
+
+</form>
+
+
+<p>Return to the <a href="index.html">index</a>.</p>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* For details about CSS and forms, see:  
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Styling_HTML_forms 
+*/
+
+
+/* form elements */
+
+form {
+	background: #cab38b;
+	padding: 40px;
+	margin-top: 20px;
+	}
+
+legend {
+	font-family: inherit;
+	font-weight: bold;
+	padding-bottom: 20px;
+	}
+
+fieldset {
+	padding-bottom: 20px;
+	}
+
+input, textarea {
+	font-family: Consolas, "Courier New", monospace;
+	font-size: 90%;
+	line-height: 120%;
+	}
+
+select {
+	font-family: inherit;
+	font-size: 90%;
+	}
+
+
+/* classes and ids */
+
+#pants {
+	float: right;
+	}
+
+.label_above {
+	padding-top: 0;
+	padding-bottom: 5px;
+	}
+
+.label_for_comments {
+	padding-bottom: 5px;
+	}
+
+#feedback {
+	background: #fff;
+	margin-top: 20px;
+	padding: 40px;
+	}
+
+#textarea_example #first, #textarea_example #last {
+	width: 250px;
+	margin-right: 10px;
+	float: left;
+	}
+
+#textarea_example #firstname, #textarea_example #lastname {
+	width: 240px;
+	}
+	
+#textarea_example #comments {
+	max-width: 500px;
+	width: 500px;
+	height: 150px;
+	}
+
+input.valex {
+	max-width: 500px;
+	width: 500px;
+	margin-bottom: 10px;
+	}
+
+#validation_example #comments {
+	max-width: 600px;
+	width: 600px;
+	height: 100px;
+	}
+
+
+
+
+

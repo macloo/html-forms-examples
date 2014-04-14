@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTLML Forms: Some Tips</title>
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<div id="wrapper">
+
+
+<button id="indexbutton"><a href="index.html">INDEX</a></button>
+
+<h1>HTML Forms: Some Tips</h1>
+
+<p>An excellent reference about HTML forms (and CSS) is <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Styling_HTML_forms" target="_blank">Styling HTML forms</a>, from Mozilla (MDN). The gist is that it's tricky, in various ways, to apply CSS to the actual form elements, such as input fields, because of remaining inconsistencies among browsers. This is one reason why <a href="http://jqueryui.com/themeroller/" target="_blank">jQuery UI and its pre-made themes</a> are so popular: The form elements in each theme look the same, reliably, across browsers and operating systems.</p>
+
+<p>Differences among browsers are illustrated <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets" target="_blank">here</a>. You might be surprised at how much the appearance of form elements varies.</p>
+
+<p>You <em>can</em> use CSS to position elements in a form and (mostly) style fonts around and inside form elements. So there is no reason for a form to look ugly. All form elements can be lined up neatly and spaced gracefully.</p>
+
+<p>A great reference for making forms (not only styling them) also comes from MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms" target="_blank">HTML forms guide</a>. A good place to see examples of all the HTML form elements and how to make them: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets" target="_blank">The native form widgets</a>.</p>
+
+<ol>
+<li>It's important to structure a form properly. (See <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form" target="_blank">How to structure an HTML form</a>.)</li>
+
+<li>One form must be enclosed in one pair of <code>&lt;form&gt;</code> tags.</li>
+
+<li>Never nest a form inside another form.</li>
+
+<li><strong>Submit:</strong> A form can have only one Submit button: <code>&lt;input type="submit"&gt;</code><br>
+The Submit button automatically submits all the form data. How it is submitted is determined by the <em>method</em> in the <code>&lt;form&gt;</code> tag, or by JavaScript, or both.</li>
+
+<li><strong>Reset:</strong> A form can have only one Reset button: <code>&lt;input type="reset"&gt;</code><br>
+The Reset button automatically clears all the form data.</li>
+
+<li>You may put more than one form on a page. Each form must be inside its own pair of <code>&lt;form&gt;</code> tags. But think carefully: Can everything work inside one form instead?</li>
+
+<li>Form elements such as <code>&lt;input&gt;</code> CAN be used without <code>&lt;form&gt;</code> tags, BUT in such cases, you will need to write JavaScript or jQuery to handle those elements. Otherwise, they won't do anything.</li>
+
+<li><strong>Fieldsets:</strong> For any set of radio buttons, all buttons in that set should be enclosed in a pair of <code>&lt;fieldset&gt;</code> tags. Each set of radio buttons needs its own pair of <code>&lt;fieldset&gt;</code> tags. (See <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form" target="_blank">How to structure an HTML form</a>.) This is demonstrated in the <a href="radioforms.html">radio buttons example</a> here. Most sets of checkboxes should be treated the same.</li>
+
+<li><strong>Legends:</strong> Use <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> when a set of radio buttons or checkboxes requires a legend (a description or question) above the set. When you have a single checkbox (such as "I have read the terms and conditions") or a pair of radio buttons (such as yes/no), do not use <code>&lt;fieldset&gt;</code> or <code>&lt;legend&gt;</code>. (See <a href="http://webaim.org/techniques/forms/controls" target="_blank">Creating Accessible Forms</a>.)</li>
+
+<li><strong>Labels:</strong> Correct use of the <code>&lt;label&gt;</code> tag makes a form more accessible for people with disabilities. Match the <code>for=""</code> and <code>id=""</code> values to properly associate the label with its matching form element. (See <a href="http://webaim.org/techniques/forms/controls" target="_blank">Creating Accessible Forms</a>.) This is also demonstrated in the <a href="radioforms.html">radio buttons example</a> here.</li>
+
+<li><strong>Name and ID:</strong> When a completed form will be sent to a database (that is, to a server), each element on the form needs both <em>name</em> and <em>value</em> in the HTML. These are not optional! The database needs to receive a name-value pair for each item so it can store the submitted data. The <em>id</em> does not "stand in" for <em>name</em>. <em>id</em> and <em>name</em> have different roles.</li>
+
+<li><strong>Input:</strong> The <code>&lt;input&gt;</code> tag has many possible attributes, and each of these should be used with precision (<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form#The_<input>_element" target="_blank">see complete list</a>). Among the most common are: <em>text, password, radio, checkbox, submit, reset,</em> and <em>button.</em> The <em>hidden</em> attribute can be especially useful for handling data.</li>
+
+<li><strong>Textarea:</strong> Inexperienced HTML coders often have trouble remembering that <code>&lt;input type="text"&gt;</code> is completely different from <code>&lt;textarea&gt;</code>. Yes, both are used for entered text. But the tags are different. See the <a href="textarea.html">textarea example</a> here.</li>
+
+<li><strong>Validation:</strong> Form validation is VERY important in professional Web development work. If you're responsible for producing a form that will contain ANY kind of personal data, or a form that is submitting to ANY server, make sure to test, test, and test again. Security holes can crash a website or compromise passwords, financial information, etc. (See <a href="http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/" target="_blank">Best Practices for Hints and Validation in Web Forms</a>.) Also see the <a href="validation.html">validation example</a> here.</li>
+
+<li><strong>Saving form data:</strong> Your form must be on the Web, and when submitted, it must specify a script or program on a Web server that will handle the form data. You need a live Web site, hosted, to process form data. Or you can use Google Forms or some other third-party solution. See the <a href="action.html">form actions page</a> here.</li>
+
+<li><strong>Captcha:</strong> The idea behind these often-annoying "type this text" devices is that a bot or spammer program can't read the characters that must be typed, and so the captcha protects the site from spam comments or emails. <a href="http://www.google.com/recaptcha" target="_blank">ReCaptcha</a> is a free captcha that is friendly to blind users. (You need your own domain name or server access to use ReCaptcha.)</li>
+
+</ol>
+
+<p>Return to the <a href="index.html">index</a>.</p>
+
+
+
+</div>
+</body>
+</html>

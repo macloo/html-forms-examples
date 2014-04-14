@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms: The Textarea Field</title>
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/form.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="scripts\/jquery.min.js"><\/script>')</script>
+	<script src="scripts/textarea.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<p class="nojs">JavaScript is not enabled in your browser. These examples will not work without JavaScript.</p>
+
+
+
+<button id="indexbutton"><a href="index.html">INDEX</a></button>
+
+<h1>Forms: The Textarea Field</h1>
+
+<p>This form has two input fields (type="text"), which are single-line only, and one textarea field (the one that allows multiple lines to be typed). Compare the HTML used for each field. This combination is very common in Web forms, so you should learn how to code and style it.</p>
+
+<p>The Submit button will write text onto the page at the bottom, below the form. Here we have an added feature: The page will scroll to that position (jQuery again).</p>
+
+<p>Note that the Reset button resets all form elements, but it does not reload the page.</p>
+
+
+<form id="textarea_example">
+
+
+<!-- width set in css file -->
+<div id="first">
+<p class="label_above">
+<label for="firstname">First name:</label>
+</p>
+<input type="text" id="firstname" name="firstname" value="">
+</div>
+
+<!-- width set in css file -->
+<div id="last">
+<p class="label_above">
+<label for="lastname">Last name:</label>
+</p>
+<input type="text" id="lastname" name="lastname" value="">
+</div>
+
+<div class="clearfloats"></div>
+
+
+<!-- width and height set in css file -->
+<p class="label_for_comments">
+<label for="comments">Your comments:</label>
+</p>
+<textarea id="comments" name="comments" value=""></textarea>
+
+<p>
+<input type="submit" name="submit" value="Submit">
+<input type="reset" name="reset" value="Reset">
+</p>
+
+</form>
+
+
+<p>Return to the <a href="index.html">index</a>.</p>
+
+
+
+</div>
+</body>
+</html>

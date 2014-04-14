@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms: Radio Buttons</title>
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/form.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="scripts\/jquery.min.js"><\/script>')</script>
+	<script src="scripts/radioforms.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<p class="nojs">JavaScript is not enabled in your browser. These examples will not work without JavaScript.</p>
+
+
+<button id="indexbutton"><a href="index.html">INDEX</a></button>
+
+<h1>Forms: Radio Buttons</h1>
+
+<p>In this form, we have two distinct sets of radio buttons. Note that in a set, only one item can be selected. If you need to allow multiple items to be selected, use checkboxes instead.</p>
+
+<p>Clicking any radio button here causes an alert to open (thanks to jQuery). The alert tells us the <em>value</em> of that button, which is in the HTML. The Submit button will write text onto the page.</p>
+
+<p>Note that the Reset button resets all form elements, but it does not reload the page.</p>
+
+<p>I added the image inside the form just for fun.</p>
+
+
+<form>
+
+<!-- the image is just for fun -->
+<div id="pants">
+<img src="images/flock_of_pants_cartoon.jpg">
+<p class="credit"><a href="http://mycartoonthing.com/permission/">Permission granted by My Cartoon Thing</a></p>
+</div>
+<!-- the image is just for fun -->
+
+
+<fieldset>
+<legend>Pants Size</legend>
+
+	<input type="radio" name="size" id="size1" value="S" />
+	<label for="size1">Small</label>
+<br>
+	<input type="radio" name="size" id="size2" value="M" />
+	<label for="size2">Medium</label>
+<br>
+	<input type="radio" name="size" id="size3" value="L" />
+	<label for="size3">Large</label>
+<br>
+	<input type="radio" name="size" id="size4" value="XL" />
+	<label for="size4">Extra Large</label>
+<br>
+</fieldset>
+
+<fieldset>
+<legend>Pants Length</legend>
+
+	<input type="radio" name="length" id="leng1" value="short" />
+	<label for="leng1">30 inches</label>
+<br>
+	<input type="radio" name="length" id="leng2" value="regular" />
+	<label for="leng2">32 inches</label>
+<br>
+	<input type="radio" name="length" id="leng3" value="long" />
+	<label for="leng3">34 inches</label>
+<br>
+</fieldset>
+
+<p>
+<input type="submit" name="submit" value="Submit">
+<input type="reset" name="reset" value="Reset">
+</p>
+
+<div class="clearfloats"></div>
+
+</form>
+
+
+<p>Return to the <a href="index.html">index</a>.</p>
+
+
+
+</div>
+</body>
+</html>

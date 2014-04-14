@@ -1,0 +1,122 @@
+body {
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 100%;
+	color: #000;
+	background: #749a98;
+	}
+#wrapper {
+	margin: 50px auto;
+	max-width: 800px;
+	background: #dbccac;
+	padding: 40px;
+	}
+
+
+/* normal stuff */
+
+h1 {
+	font-family: Cambria, Georgia, serif;
+	font-size: 200%;
+	font-weight: normal;
+	line-height: 140%;
+	}
+p {
+	line-height: 140%;
+	padding-top: 20px;
+	}
+em {
+	font-style: italic;
+	}
+strong {
+	font-weight: bold;
+	}
+ol {
+	padding-top: 20px;
+	}
+li {
+	margin-left: 50px;
+	font-size: 100%;
+	line-height: 140%;
+	padding-top: 10px;
+	}
+
+
+/* extra stuff */
+
+.clearfloats {
+	clear: both;
+	}
+
+code {
+	font-family: Consolas, "Courier New", monospace;
+	font-size: 90%;
+	background: #fff;
+	padding: 1px;
+	padding-top: 3px;
+	}
+
+.credit {
+	font-size: 60%;
+	text-align: right;
+	text-transform: uppercase;
+	padding-top: 5px;
+	}
+
+.nojs {
+	background: #fff;
+	padding: 20px;
+	margin-bottom: 20px;
+	}
+
+
+/* links */
+
+a:focus {
+	outline: #ccf solid 4px;
+	}
+a:link, a:active, a:visited {
+	color: #1C7873;
+	text-decoration: underline;
+	}
+a:hover {
+	color: #749a98;
+	text-decoration: none;
+	}
+
+
+/* index button */
+
+#indexbutton {
+	width: 120px;
+	float: right;
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 90%;
+	letter-spacing: .15em;
+	margin: -20px;
+	background: #5c5c5a;
+	color: #fff;
+	-webkit-border-radius: 50px; 
+	-moz-border-radius: 50px; 
+	border-radius: 50px;
+	border: 1px solid #5c5c5a;
+	overflow: hidden;
+	}
+
+#indexbutton:hover {
+	background: #998a6d;
+	font-size: 100%;
+	}
+
+#indexbutton a:link, #indexbutton a:active, 
+#indexbutton a:visited, #indexbutton a:hover {
+	display: block;
+	padding: 10px;
+	color: #fff;
+	text-decoration: none;
+	border: none;
+	}
+
+#indexbutton a:active, #indexbutton {
+	outline: none;
+	}
+
