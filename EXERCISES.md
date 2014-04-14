@@ -19,7 +19,7 @@ The **jquery.min.js** file is included so you can run everything offline if need
 
 ##form1
 
-These files (**form1.html** and **form1.js**) deal with text fields. First, play with [the live page](http://macloo.github.io/html-forms-examples/form1.html). Then look at the HTML, flipping between the HTML file in your text editor and the live page in your browser. Try to change the text inside the four fields. Click **Submit.** Reset the form, click **Submit** again.
+These files (**form1.html** and **form1.js**) deal with text fields. First, play with [the live page](http://macloo.github.io/html-forms-examples/form1.html). Then look at the HTML, flipping between the HTML file in your text editor and the live page in your browser. On the live page, try to change the text in the four fields. Click **Submit.** Reset the form, click **Submit** again.
 
 Now look at the code in **form1.js** -- start by looking at line 13. The key there is `.blur()` -- read the text inside quotes (line 14), go back to the live page, figure it out.
 
