@@ -23,12 +23,23 @@ These files (**form1.html** and **form1.js**) deal with text fields. First, play
 
 Now look at the code in **form1.js** -- start by looking at line 13. The key there is `.blur()` -- read the text inside quotes (line 14), go back to the live page, figure it out.
 
-Look at lines 17 and 18. Same idea, but now with `.focus()` -- see how it works by playing on the live page.
+Look at lines 17-19. Same idea, but now with `.focus()` -- see how it works by playing on the live page.
 
 Lines 21 to 37 control what happens when you click **Submit.** This is all jQuery. Don't change what's in lines 21, 23 and 37, but you can edit what's in between to experiment.
 
-**Exercise:** In the HTML, a a new text field in the HTML, after the other text fields, but before the submit code. Follow the pattern of the four original text fields, but be sure to change `id=""`, `name=""`, and `value=""` in your new code element. Save the HTML file in your text editor and then test it in your browser.
+**Exercise 1:** In the HTML, add a new text field in the HTML, after the other text fields, but before the `<br>` code. Follow the pattern of the four original text fields, but be sure to change `id=""`, `name=""`, and `value=""` inside your new code element (your `<input>` tag). Save the HTML file in your text editor and then test it in your browser.
 
+Notice that your new text field behaves like the others, but when you submit the form, the value of your text field is never written at the bottom of the page. Now you will fix that -- in the jQuery.
+
+**Exercise 2:** In the JS, you know `.blur()` and `.focus()` (lines 13-19) are working. Can you figure out why, by looking at the code? What do those lines target? What is `$('input[type=text]')`?
+
+Now you need to add new code in the function that begins on line 21. (Remember -- don't change what's in lines 21, 23 and 37.) Can you write two new lines that will enable you new text field to be written to the HTML document? Follow the pattern. Save and test it by reloading the HTML page in your browser.
+
+`var a = $('#field1').val();` gets the *value* of the item with `id="field1"` and stores that value in the *variable* **a.**
+
+`$('#wrapper').append('<br>' + a + '<br>');` finds the item with `id="wrapper"` (it is a div that encloses everything on the page) and writes to the bottom inside that item. What does it write? A `<br>` (line break), the value of the variable **a,** and another `<br>`.
+
+**MORE IS COMING**
 
 ##License
 
